@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="weather-app">
+            <h1>Weather Dashboard</h1>
+            <!-- Add this to your navigation or header section -->
+<div class="theme-toggle-container">
+    <button id="theme-toggle" aria-label="Toggle Dark Mode">
+        <span class="theme-icon">🌓</span>
+    </button>
+</div>
+            
+            <div class="search-container">
+                <input type="text" id="city-input" placeholder="Enter city name">
+                <button id="search-btn">Search</button>
+                    
+                </button>
+            </div>
+            <div id="error-message" class="error-message"></div>
+
+            <div id="weather-card" class="weather-card hidden">
+                <div class="weather-header">
+                    <h2 id="city-name">City Name</h2>
+                    <div id="weather-icon" class="weather-icon"></div>
+                </div>
+
+                <div class="weather-details">
+                    <div class="temperature">
+                        <span id="temp-value">--</span>
+                        <span id="temp-unit">°C</span>
+                    </div>
+
+                    <div class="details-grid">
+                        <div class="detail">
+                            <h3>Humidity</h3>
+                            <p id="humidity">--</p>
+                        </div>
+                        <div class="detail">
+                            <h3>Wind Speed</h3>
+                            <p id="wind-speed">--</p>
+                        </div>
+                        <div class="detail">
+                            <h3>Description</h3>
+                            <p id="weather-description">--</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="forecast-container" class="forecast-container"></div>
+            <div class="air-quality-container">
+                <h3>Air Quality Index (AQI)</h3>
+                <div class="aqi-details">
+                    <div class="aqi-icon">
+                        <i class="fas fa-wind"></i>
+                    </div>
+                    <div class="aqi-info">
+                        <div class="aqi-value" id="aqi-value">--</div>
+                        <div class="aqi-category" id="aqi-category">No Data</div>
+                    </div>
+                </div>
+                <div class="aqi-description" id="aqi-description">
+                    Air quality information not available
+                </div>
+                <div class="aqi-pollutants">
+                    <div class="pollutant" id="pm25-value">PM2.5: --</div>
+                    <div class="pollutant" id="pm10-value">PM10: --</div>
+                    <div class="pollutant" id="co-value">CO: --</div>
+                    <div class="pollutant" id="no2-value">NO2: --</div>
+                    <div class="pollutant" id="o3-value">O3: --</div>
+                </div>
+            </div>
+                <div class="favorite-actions">
+                    <button id="add-favorite-btn">Add to Favorites</button>
+                    <div id="favorites-container" class="favorites-container"></div>
+                </div>
+        </div>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
